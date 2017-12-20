@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+  <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>  
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+<body>
+<style>
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#">Architects</a>
+  <a href="Blog.html">Blog</a>
+  <a href="forums.html">Forums</a>
+  <a href="job.html">Jobs</a>
+  <a href="events.html">Events</a>
+</div>
+
+
+
+    <head>
+
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+	<div class="col-sm-6">
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                	
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                           <h3></h3>
+                            <div class="description">
+                            	
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+	                        	<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Login to our site</h3>
+	                            		<p>Enter username and password to log on:</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-key"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+	                             <form  ng-app="myApp" ng-submit="submitForm()" name="myForm" novalidate>                           
+	                            
+				                    <div class="form-group" ng-class="{ 'has-error' : myForm.email.$invalid && !myForm.email.$pristine }">
+				             <label class="sr-only" for="form-email">Email</label>
+				                        	<input type="email" name="email" placeholder="Email..." class="form-email form-control" id="form-email" ng-model="email" required>
+				                       <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+  <span ng-show="myForm.email.$error.required">Email is required.</span>
+  <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+  </span>
+				                        </div>	
+				                        <div class="form-group" ng-class="{ 'has-error' : myForm.name.$invalid && !myForm.name.$pristine }">
+				                        	<label class="sr-only" for="form-password">Password</label>
+
+            <input type="password" name="password" class="form-control" placeholder="Password..."ng-model="user.password" required>
+            
+            <p style="color:red" ng-show="myForm.password.$invalid && !myForm.password.$pristine" class="help-block">Password is required.</p>
+        </div>
+				                        <button type="submit" class="btn">Sign in!</button>
+				                    </form>
+				                  <!--   <form role="form" action="" method="post" class="login-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-username">Username</label>
+				                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+				                        </div> 
+				                         
+        
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-password">Password</label>
+				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+				                        </div>
+				                        <button href="Blog.html" type="submit" class="btn">Sign in!</button>
+				                    </form> -->
+			                    </div>
+		                    </div>
+		                
+		                	<div class="social-login">
+	                        	<h3>...or login with:</h3>
+	                        	<div class="social-login-buttons">
+		                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
+		                        		<i class="fa fa-facebook"></i> Facebook
+		                        	</a>
+		                        	<a class="btn btn-link-1 btn-link-1-twitter" href="#">
+		                        		<i class="fa fa-twitter"></i> Twitter
+		                        	</a>
+		                        	<a class="btn btn-link-1 btn-link-1-google-plus" href="#">
+		                        		<i class="fa fa-google-plus"></i> Google Plus
+		                        	</a>
+	                        	</div>
+	                        </div>
+	                        
+                        </div>
+                        
+                        <div class="col-sm-1 middle-border"></div>
+                        <div class="col-sm-1"></div>
+                        	
+                        <div class="col-sm-5">
+                        	
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                        			<h3>Sign up now</h3>
+	                            		<p>Fill in the form below to get instant access:</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                            </div>
+	                            
+	                            <div class="form-bottom">
+	                            <form name="userForm" ng-submit="submitForm()" novalidate>
+	                             <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+				                        	<label class="sr-only" for="form-firstname">First name</label>
+
+            <input type="text" name="name" class="form-control" placeholder="First name..."ng-model="user.name" required>
+            
+            <p style="color:red" ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You first name is required.</p>
+        </div>
+      
+				                       <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+				                        	<label class="sr-only" for="form-lastname">Last name</label>
+
+            <input type="text" name="lastname" class="form-control" placeholder="Last name..."ng-model="user.lastname" required>
+            
+            <p style="color:red" ng-show="userForm.lastname.$invalid && !userForm.lastname.$pristine" class="help-block">You last name is required.</p>
+        </div>
+				                         <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+				                        	<label class="sr-only" for="form-email">Email</label>
+
+            <input type="email" name="email" class="form-control" placeholder="Email..." ng-model="user.email" required >
+              <span style="color:red" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+            
+<span ng-show="userForm.email.$error.required">Email is required.</span>
+  <span ng-show="userForm.email.$error.email">Invalid email address.</span>
+  </span>            
+        </div>
+         <div class="form-group">
+        <input name="password" type="password" class="form-control" placeholder="Password" ng-model="formData.password" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required />
+        <span style="color:red" ng-show="!userForm.password.$error.required &&  userForm.password.$error.pattern && userForm.password.$dirty">Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol.)</span>
+      </div>
+      <div class="form-group">
+        <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password" ng-model="formData.confirmPassword" ng-pattern="formData.password" required />
+        <span style="color:red" ng-show="formData.password != formData.confirmPassword">Your passwords must match.</span>
+      </div>
+      <div>
+
+  				                         
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
+				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
+				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+				                        </div>
+				                        <button type="submit" class="btn" ng-disabled="formData.password != formData.confirmPassword" ng-click="createUser()">Sign me up!</button>
+				                    </form>
+	                              	 <!-- <form role="form" action="" method="post" class="registration-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-first-name">First name</label>
+				                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-last-name">Last name</label>
+				                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-email">Email</label>
+				                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-password">Password</label>
+				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-ema">ConfirmPassword</label>
+				                        	<input type="password" name="form-confirmpassword" placeholder="ConfirmPassword..." class="form-confirmpassword form-control" id="form-confirmpassword">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
+				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
+				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+				                        </div>
+				                        <button type="submit" class="btn">Sign me up!</button>
+				                    </form>   -->
+			                    </div>
+                        	</div>
+                        	
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+        <footer>
+        	
+        </footer>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
