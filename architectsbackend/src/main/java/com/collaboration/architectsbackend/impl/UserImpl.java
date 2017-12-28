@@ -64,4 +64,10 @@ public class UserImpl implements UserDao {
 		}
 	
 	}
+
+
+	public User find(int userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
