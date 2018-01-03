@@ -35,14 +35,30 @@ body {margin:0;}
 </head>
 <body>
 
-<div class="topnav">
-  <a class="active" href="#">Architects</a>
-  <a href="Blog.html">Blog</a>
-  <a href="forums.html">Forums</a>
-  <a href="job.html">Jobs</a>
-  <a href="events.html">Events</a>
+<div>
+<nav-bar></nav-bar>
 </div>
+<div>
+<ng-view></ng-view>
+</div> 
+<!-- <div class="container-fluid">
 
+
+		<nav-bar></nav-bar>  Common navbar will be placed every where in every page
+		
+		<i class="ajax-loader fa fa-spinner fa-pulse fa-3x"/></i>
+		
+
+
+
+
+		<div class="content">
+
+
+			<ng-view></ng-view>  Middle content will be placed here 
+
+		</div>
+	</div>Content wrapper ends here -->
 
 
     <head>
@@ -258,7 +274,12 @@ body {margin:0;}
         <footer>
         	
         </footer>
+<script src="./assets/js/angular-route.js"></script>
+<script src="./assets/js/angular-cookies.js"></script>
+<script src="./assets/js/ngStorage.js"></script>
+<script src="./assets/js/app.js"></script>
 
+<script src="./assets/js/app.routes.js"></script>
         <!-- Javascript -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
