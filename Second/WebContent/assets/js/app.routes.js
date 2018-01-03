@@ -4,6 +4,12 @@ when('/blog',{
 	templateUrl:'./ui/Blog.html',
 }).
 when('/',{
+	templateUrl:'./ui/forums.html',
+}).
+when('/',{
+	templateUrl:'./ui/job.html',
+}).
+when('/',{
 	templateUrl:'./ui/main.html',
 })
 }]);
