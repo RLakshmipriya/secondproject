@@ -3,10 +3,16 @@ app.config(['$routeProvider','$locationProvider',function($routeProvider,$locati
 when('/blog',{
 	templateUrl:'./ui/Blog.html',
 }).
-when('/',{
+when('/bloglist',{
+	templateUrl:'./ui/bloglist.html',
+}).
+when('/forums',{
 	templateUrl:'./ui/forums.html',
 }).
-when('/',{
+when('/forumslist',{
+	templateUrl:'./ui/forumslist.html',
+}).
+when('/job',{
 	templateUrl:'./ui/job.html',
 }).
 when('/',{

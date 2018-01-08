@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 	<form ng-submit="loginCtrl.registerUser()">
+		<h2 class="ctitle">Sign Up</h2>
+		<p class="success" ng-if="loginCtrl.registered"><img src="./.././assets/images/completed.png" alt="completed"> Congratulations ! You are successfully registered with us.</p>
+		<p class="error red lighten-2" ng-if="loginCtrl.error"><img src="./.././assets/images/warning.png" alt="warning"> Unable to complete your request please try after sometime</p>
+		<p class="error red lighten-2" ng-if="loginCtrl.userexist"><img src="./../.././assets/images/notallowed.png" alt="not_allowed">Sorry, User exists with same email ID try different</p>
+		<br>
+		<div class="input-field">
+			<input type="text" id="register-email" ng-model="loginCtrl.user.registerEmail">
+			<label for="register-email">Email Id</label>
+		</div>
+		<div class="input-field"><input type="text" id="registerName" ng-model="loginCtrl.user.registerName">
+			<label for="register-name">Full Name</label></div>
+			<br>
+
+			<fieldset><legend>Role</legend>
+				<input class="with-gap" name="role" type="radio" value="ROLE_STUDENT" id="student-radio" ng-model="loginCtrl.user.registerRole" />
+				<label for="student-radio">Student</label>
+
+				<input class="with-gap" name="role" type="radio" value="ROLE_ALUMNI" id="alumni-radio" ng-model="loginCtrl.user.registerRole" />
+				<label for="alumni-radio">Alumni</label>
+
+				<input class="with-gap" name="role" type="radio" id="employee-radio" value="ROLE_EMPLOYEE" ng-model="loginCtrl.user.registerRole" />
+				<label for="employee-radio">Employee</label>
+			</fieldset>
+
+			<br>
+
+			<fieldset><legend>Gender</legend>
+				<input class="with-gap" name="gender" type="radio" id="gender-male" value="male" ng-model="loginCtrl.user.registerGender" />
+				<label for="gender-male">Male</label>
+
+				<input class="with-gap" name="gender" type="radio" id="gender-female" value="female" ng-model="loginCtrl.user.registerGender" />
+				<label for="gender-female">Female</label>
+			</fieldset>
+
+			<div class="input-field">
+				<input type="password" id="register-password" ng-model="loginCtrl.user.registerPassword" >
+				<label for="register-password" >Password</label>
+			</div>
+			<div class="input-field">
+				<input type="password" id="register-confirm-password" ng-model="loginCtrl.user.conPass">
+				<label for="register-confirm-password">Confirm Password</label>
+			</div>
+			<input type="submit" value="Sign Up" class="btn btn-success">
+		</form>	 -->
+<form ng-submit="registerCtrl.registerUser()">
+
+		<h2 class="ctitle">Sign Up</h2>
+		<br>
+		<div class="input-field">
+			<input type="text" id="register-email" ng-model="registerCtrl.user.email" />
+			<label for="register-email">Email Id</label>
+		</div>
+				<div class="input-field">
+			<input type="text" id="register-contact" ng-model="registerCtrl.user.contact" />
+			<label for="register-contact">Contact</label>
+		</div>
+		<div class="input-field">
+			<input type="text" id="registerName" ng-model="registerCtrl.user.name" />
+			<label for="register-name">Full Name</label></div>
+			<br>
+
+			<fieldset><legend>Role</legend>
+				<input class="with-gap" name="role" type="radio" value="ROLE_STUDENT" id="student-radio" ng-model="registerCtrl.user.role"/>
+				<label for="student-radio">Student</label>
+
+				<input class="with-gap" name="role" type="radio" value="ROLE_ALUMNI" id="alumni-radio" ng-model="registerCtrl.user.role" />
+				<label for="alumni-radio">Alumni</label>
+
+				<input class="with-gap" name="role" type="radio" id="employee-radio" value="ROLE_EMPLOYEE" ng-model="registerCtrl.user.role" />
+				<label for="employee-radio">Employee</label>
+			</fieldset>
+
+			<br>
+
+<!-- 			<fieldset><legend>Gender</legend>
+				<input class="with-gap" name="gender" type="radio" id="gender-male" value="male" ng-model="registerCtrl.user.gender" />
+				<label for="gender-male">Male</label>
+
+				<input class="with-gap" name="gender" type="radio" id="gender-female" value="female" ng-model="registerCtrl.user.gender" />
+				<label for="gender-female">Female</label>
+			</fieldset> -->
+
+			<div class="input-field">
+				<input type="password" id="register-password" ng-model="registerCtrl.user.password" />
+				<label for="register-password" >Password</label>
+			</div>
+<!-- 			<div class="input-field">
+				<input type="password" id="register-confirm-password" ng-model="registerCtrl.user.cpassword" />
+				<label for="register-confirm-password">Confirm Password</label>
+			</div> -->
+			<input type="submit"  value="Sign Up" class="btn btn-success">
+		</form>			
+</body>
+</html>
