@@ -1,0 +1,55 @@
+<br>
+<br>
+<br>
+<form class="form-horizontal">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Add Event</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Event Name</label>
+            <div class="col-md-6">
+                <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Select Basic -->
+        
+<div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Event Description</label>
+            <div class="col-md-6">
+                <input id="textinput" name="textinput" type="text" placeholder="Description" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <!-- Appended Input-->
+        <form action="/action_page.php">
+  Event (date and time):
+  <input type="datetime-local" name="bdaytime">
+  </form>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="venueName">Venue</label>
+            <div class="col-md-6">
+                <input id="venueName" name="venueName" type="text" placeholder="" class="form-control input-md">
+
+            </div>
+        </div>
+        
+      
+        
+
+        <!-- Button (Double) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="submitButton"></label>
+            <div class="col-md-8">
+                <button id="submitButton" name="submitButton" class="btn btn-primary">Save</button>
+                <button id="cancelButton" name="cancelButton" class="btn btn-danger">Cancel</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>

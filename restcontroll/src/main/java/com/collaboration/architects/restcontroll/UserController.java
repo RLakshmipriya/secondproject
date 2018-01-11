@@ -33,7 +33,7 @@ public class UserController {
 		return new ResponseEntity<User>(entity, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/user/{userId}", method=RequestMethod.GET)
+/*	@RequestMapping(value="/user/{userId}", method=RequestMethod.GET)
 	public @ResponseBody User getUserN(@PathVariable("userId") int userId) {
 		User entity= userDao.find(userId);
 		if (entity == null) {
@@ -41,5 +41,5 @@ public class UserController {
 		}		
 		return entity;
 	}
-
+*/
 }
