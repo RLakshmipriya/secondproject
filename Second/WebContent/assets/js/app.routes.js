@@ -21,6 +21,9 @@ when('/dashboard',{
 when('/events',{
 	templateUrl:'./ui/components/events.html',
 }).
+when('/',{
+	templateUrl:'./ui/shared/home.html',
+}).
 when('/profile',{
 	templateUrl:'./ui/components/profile.html',
 }).

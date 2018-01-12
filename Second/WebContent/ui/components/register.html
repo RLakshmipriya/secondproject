@@ -70,8 +70,8 @@ body {margin:0;}
                 	
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Architects</strong></h1>
-                                                             
+                                       <h1>Architects</h1>
+                            
                             
                         </div>
                     </div>
@@ -94,7 +94,7 @@ body {margin:0;}
 				                    <div class="form-group" ng-class="{ 'has-error' : myForm.email.$invalid && !myForm.email.$pristine }">
 				             <label class="sr-only" for="form-email">Email</label>
 				                        	<input type="email" name="email" placeholder="Email..." class="form-email form-control" id="form-email" ng-model="email" required>
-				                       <span style="color:white" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+				                       <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
   <span ng-show="myForm.email.$error.required">Email is required.</span>
   <span ng-show="myForm.email.$error.email">Invalid email address.</span>
   </span>
@@ -110,7 +110,7 @@ body {margin:0;}
 				                        	<label class="sr-only" for="form-password">Password</label>
             <input type="password" name="password" class="form-control" placeholder="Password..."ng-model="user.password" required>
             
-            <p style="color:white" ng-show="myForm.password.$invalid && !myForm.password.$pristine" class="help-block">Password is required.</p>
+            <p style="color:red" ng-show="myForm.password.$invalid && !myForm.password.$pristine" class="help-block">Password is required.</p>
         </div>
 				                        <button type="submit" class="btn">Sign in!</button>
 				                    </form>
@@ -150,20 +150,19 @@ body {margin:0;}
 	                            </div>
 	                            <div class="form-bottom">
 	                            
-<form name="userForm" ng-submit="submitForm()" novalidate>	                            
-				                    	
-				                         <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+<form name="userForm" ng-submit="submitForm()" novalidate>
+<div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
 				                        	<label class="sr-only" for="form-firstname">First name</label>
             <input type="text" name="name" class="form-control" placeholder="First name..."ng-model="user.name" required>
             
-            <p style="color:white" ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You first name is required.</p>
+            <p style="color:red" ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You first name is required.</p>
         </div>
       
 				                       <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
 				                        	<label class="sr-only" for="form-lastname">Last name</label>
             <input type="text" name="lastname" class="form-control" placeholder="Last name..."ng-model="user.lastname" required>
             
-            <p style="color:white" ng-show="userForm.lastname.$invalid && !userForm.lastname.$pristine" class="help-block">You last name is required.</p>
+            <p style="color:red" ng-show="userForm.lastname.$invalid && !userForm.lastname.$pristine" class="help-block">You last name is required.</p>
         </div>
 				                         <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
 				                        	<label class="sr-only" for="form-email">Email</label>
@@ -174,16 +173,15 @@ body {margin:0;}
   <span ng-show="userForm.email.$error.email">Invalid email address.</span>
   </span>            
         </div>
-       
-				                         <div class="form-group">
+         <div class="form-group">
         <input name="password" type="password" class="form-control" placeholder="Password" ng-model="formData.password" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required />
         
-        <span style="color:white" ng-show="!userForm.password.$error.required &&  userForm.password.$error.pattern && userForm.password.$dirty">Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol.)</span>
+        <span style="color:red" ng-show="!userForm.password.$error.required &&  userForm.password.$error.pattern && userForm.password.$dirty">Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol.)</span>
       
       </div>
       <div class="form-group">
         <input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password" ng-model="formData.confirmPassword" ng-pattern="formData.password" required />
-        <span style="color:white" ng-show="formData.password != formData.confirmPassword">Your passwords must match.</span>
+        <span style="color:red" ng-show="formData.password != formData.confirmPassword">Your passwords must match.</span>
       </div>
       <div>
   				                         
